@@ -8,7 +8,7 @@
 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/serif.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/monokai.css">
@@ -25,8 +25,83 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+
+				<section data-markdown><textarea data-template>## Git Intro 2019</textarea></section>
+
+				<section>
+					<section data-markdown><textarea data-template>
+						### Today
+						![git img1](./pres1img/NoVCS.jpg)
+					</textarea></section>
+					<section data-markdown><textarea data-template>
+						**Issues**
+						* <!-- .element: class="fragment" data-fragment-index="1" --> 
+						Inconsistent home
+						* <!-- .element: class="fragment" data-fragment-index="2" --> 
+						What changed?
+						* <!-- .element: class="fragment" data-fragment-index="3" --> 
+						Which is current? In PRD?
+						* <!-- .element: class="fragment" data-fragment-index="4" --> 
+						How are we sharing?  
+						* <!-- .element: class="fragment" data-fragment-index="5" --> 
+						Can it be easier?
+
+					</textarea></section>
+				</section>
+				
+
+
+				<section>
+						
+						<section data-markdown><textarea datatemplate>
+							### Git Psuedo
+							![git img2](./pres1img/images/snapshots.png)
+							
+						</textarea></section>
+						<section data-markdown><textarea datatemplate>
+							### Git Psuedo
+							![git img2](./pres1img/images/areas.png)
+							<aside class="notes">
+									Demo Client with sample create/add/commit
+									Maybe show terminal...
+								</aside>
+						</textarea></section>
+						<section data-markdown><textarea datatemplate>
+								### Git Psuedo
+								![git img2](./pres1img/dvcs.png)
+								
+							</textarea></section>
+				</section>
+
+				<section data-markdown="">
+					<!-- <textarea data-template> -->
+								
+						<script type="text/template">
+							**Benefits** 
+							
+							1. <!-- .element: class="fragment" data-fragment-index="2" --> 
+							Everyone has (_can_ _have_) a local copy
+							2. <!-- .element: class="fragment" data-fragment-index="3" -->
+							Fast, only need overhead when **Done** 
+						</script>
+					<!-- </textarea> -->
+				</section>	
+				<section data-markdown="">
+					<textarea data-template>
+						The basic Git workflow goes something like this:
+
+						> * You **modify** files in your working tree.
+						> * You selectively **stage** just those changes you want to be part of your next commit, which adds only those changes to the staging area.
+						> * You do a **commit**, which takes the files as they are in the staging area and stores that snapshot permanently to your Git directory
+					</textarea>
+				</section>
+					
+				<!-- <section data-markdown=""><textarea data-template="">
+					* Item 1 .element: class="fragment" data-fragment-index="1"
+					* Item 2 .element: class="fragment" data-fragment-index="2"
+				</textarea></section> -->
+
+					
 			</div>
 		</div>
 
@@ -41,8 +116,12 @@
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true }
-				]
+					{ src: 'plugin/highlight/highlight.js', async: true },
+					// Zoom in and out with Alt+click
+					{ src: 'plugin/zoom-js/zoom.js', async: true }
+				],
+				// Transition style
+				transition: 'fade', // none/fade/slide/convex/concave/zoom
 			});
 		</script>
 	</body>
